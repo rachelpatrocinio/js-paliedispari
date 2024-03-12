@@ -27,12 +27,11 @@ console.log(arrayUserWordReversed);
 function isPalindrome(word1, word2){
 
     let result = false;
-    // CONTROLLO SE OGNI LETTERA COMPACIA
+    // CONTROLLO SE OGNI LETTERA COMBACIA
     for (let i = 0; i < word1.length; i++){
 
         if (word1[i] !== word2[i]) {
             console.log("The word is not Palindrome");
-            result = false;
         } else {
             console.log("The word is Palindrome");
             result = true;
@@ -41,8 +40,8 @@ function isPalindrome(word1, word2){
     return result;
 }
 
-const result = isPalindrome(arrayUserWord, arrayUserWordReversed);
-console.log(result);
+const finalResult = isPalindrome(arrayUserWord, arrayUserWordReversed);
+console.log(finalResult);
 
 
 
