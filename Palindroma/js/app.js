@@ -23,22 +23,26 @@ for(let i = userWord.length - 1; i >= 0 ; i--){
 }
 console.log(arrayUserWordReversed);
 
-
 function isPalindrome(word1, word2){
 
-    let result = false;
+    let result;
     // CONTROLLO SE OGNI LETTERA COMBACIA
     for (let i = 0; i < word1.length; i++){
 
         if (word1[i] !== word2[i]) {
-            console.log("The word is not Palindrome");
+            result = false;
         } else {
-            console.log("The word is Palindrome");
             result = true;
         }
     }
+    if(result === false){
+        console.log("The word is not Palindrome");
+    } else{
+        console.log("The word is Palindrome");
+    }
     return result;
 }
+
 
 const finalResult = isPalindrome(arrayUserWord, arrayUserWordReversed);
 console.log(finalResult);
