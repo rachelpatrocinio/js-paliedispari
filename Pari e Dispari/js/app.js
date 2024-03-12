@@ -11,22 +11,21 @@ console.log("JS-PARI E DISPARI");
 // Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
 const evenOdd = prompt("Pari o Dispari?");
-//console.log(evenOdd);
+console.log(evenOdd);
 
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-//console.log(userNumber, "User Number");
+console.log(userNumber, "User Number");
 
 if(userNumber <= 5 && 
     userNumber > 0 && 
-    evenOdd === "pari" || evenOdd =="dispari"){
+    evenOdd === "pari" || evenOdd === "dispari"){
         function random(){
             const randomNumber = parseInt(Math.floor(Math.random()*5)+1);
-            //console.log(randomNumber, "Random Number");
+            console.log(randomNumber, "Random Number");
             return randomNumber;
-        
         }
         const randomNum = random();
-        console.log(randomNum, "Random Number");
+        //console.log(randomNum, "Random Number");
         
         const sum = userNumber + randomNum;
         console.log(sum,"Sum");
