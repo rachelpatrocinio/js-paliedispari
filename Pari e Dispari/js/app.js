@@ -22,10 +22,10 @@ function random(){
     return randomNumber;
 
 }
-console.log(random(), "Random Number");
+const randomNum = random();
+console.log(randomNum, "Random Number");
 
-const sum = userNumber + random();
-
+const sum = userNumber + randomNum;
 console.log(sum,"Sum");
 
 function isEvenOdd(num){
