@@ -11,40 +11,48 @@ console.log("JS-PARI E DISPARI");
 // Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
 const evenOdd = prompt("Pari o Dispari?");
-console.log(evenOdd);
+//console.log(evenOdd);
 
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-console.log(userNumber, "User Number");
+//console.log(userNumber, "User Number");
 
-function random(){
-    const randomNumber = parseInt(Math.floor(Math.random()*5)+1);
-    //console.log(randomNumber, "Random Number");
-    return randomNumber;
+if(userNumber <= 5 && 
+    userNumber > 0 && 
+    evenOdd === "pari" || evenOdd =="dispari"){
+        function random(){
+            const randomNumber = parseInt(Math.floor(Math.random()*5)+1);
+            //console.log(randomNumber, "Random Number");
+            return randomNumber;
+        
+        }
+        const randomNum = random();
+        console.log(randomNum, "Random Number");
+        
+        const sum = userNumber + randomNum;
+        console.log(sum,"Sum");
+        
+        function isEvenOdd(num){
+            if(num % 2 === 0){
+                console.log("Il numero è pari");
+                return true;
+            } else{
+                console.log("Il numero è dispari");
+                return false;
+            }
+        }
 
-}
-const randomNum = random();
-console.log(randomNum, "Random Number");
-
-const sum = userNumber + randomNum;
-console.log(sum,"Sum");
-
-function isEvenOdd(num){
-    if(num % 2 === 0){
-        console.log("Il numero è pari");
-        return true;
-    } else{
-        console.log("Il numero è dispari");
-        return false;
+        const verification = isEvenOdd(sum)
+        //console.log(verification);
+        
+        if(evenOdd === "pari" && sum === true){
+            console.log("Hai Vinto!");
+        } else if (evenOdd === "dispari" && sum === false){
+            console.log("Hai Vinto!");
+        } else{
+            console.log("Hai Perso!");
+        }
     }
+else{
+    alert("error");
 }
 
-const verification = isEvenOdd(sum)
-//console.log(verification);
-
-if(evenOdd === "pari" && sum === true){
-    console.log("Hai Vinto!");
-} else if (evenOdd === "dispari" && sum === false){
-    console.log("Hai Vinto!");
-} else{
-    console.log("Hai Perso!");
-}
