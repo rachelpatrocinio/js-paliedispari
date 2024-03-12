@@ -19,27 +19,13 @@ console.log(userNumber, "User Number");
 if(userNumber <= 5 && 
     userNumber > 0 && 
     evenOdd === "pari" || evenOdd === "dispari"){
-        function random(){
-            const randomNumber = parseInt(Math.floor(Math.random()*5)+1);
-            console.log(randomNumber, "Random Number");
-            return randomNumber;
-        }
+        
         const randomNum = random();
         //console.log(randomNum, "Random Number");
         
         const sum = userNumber + randomNum;
         console.log(sum,"Sum");
         
-        function isEvenOdd(num){
-            if(num % 2 === 0){
-                console.log("Il numero è pari");
-                return true;
-            } else{
-                console.log("Il numero è dispari");
-                return false;
-            }
-        }
-
         const verification = isEvenOdd(sum)
         //console.log(verification);
         
@@ -50,8 +36,27 @@ if(userNumber <= 5 &&
         } else{
             console.log("Hai Perso!");
         }
-    }
+}
 else{
     alert("error");
 }
 
+
+
+
+
+function random(){
+    const randomNumber = parseInt(Math.floor(Math.random()*5)+1);
+    console.log(randomNumber, "Random Number");
+    return randomNumber;
+}
+
+function isEvenOdd(num){
+    if(num % 2 === 0){
+        console.log("Il numero è pari");
+        return true;
+    } else{
+        console.log("Il numero è dispari");
+        return false;
+    }
+}
