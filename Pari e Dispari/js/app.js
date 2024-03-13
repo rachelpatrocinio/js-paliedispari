@@ -29,9 +29,9 @@ if(userNumber <= 5 &&
         const verification = isEvenOdd(sum)
         //console.log(verification);
         
-        if(evenOdd === "pari" && sum === true){
+        if(evenOdd === "pari" && verification === true){
             console.log("Hai Vinto!");
-        } else if (evenOdd === "dispari" && sum === false){
+        } else if (evenOdd === "dispari" && verification === false){
             console.log("Hai Vinto!");
         } else{
             console.log("Hai Perso!");
